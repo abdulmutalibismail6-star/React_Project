@@ -6,71 +6,70 @@ export default function App() {
     <div className="min-h-screen bg-[#0b0914] text-white selection:bg-purple-500 selection:text-white overflow-x-hidden font-sans">
       
       {/* HEADER / NAVBAR */}
-      <header className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+      <header className="max-w-7xl mx-auto px-6 pt-6 pb-4 flex flex-col md:flex-row items-center justify-between gap-4 border-b border-white/10">
+        
+        {/* Logo Section */}
         <div className="flex items-center gap-2 font-bold text-xl tracking-wider">
-          <span className="bg-white text-black px-2 py-0.5 rounded font-black">LEE</span>
-          <span>Mr. Lee labs</span>
+          <span className="bg-white text-black px-2 py-0.5 rounded font-black text-sm">LEE</span>
+          <span className="whitespace-nowrap">Mr. Lee labs</span>
         </div>
 
-      <nav className="w-full py-4 border-b border-white/10 px-4">
-        <div className="flex justify-center items-center gap-6 text-sm text-slate-300">
-        <a href="#home" className="hover:text-white transition-colors">Home</a>
-        <a href="#services" className="hover:text-white transition-colors">Services</a>
-        <a href="#projects" className="hover:text-white transition-colors">Projects</a>
-        </div>
-      </nav>
-        <button className="bg-white/10 hover:bg-white/20 text-white text-sm px-4 py-2 rounded-full border border-white/10 transition">
-          Let's to Lee
+        {/* Centralized Navigation Links Underneath Logo on Mobile */}
+        <nav className="w-full md:w-auto">
+          <div className="flex justify-center items-center gap-6 text-sm text-slate-300">
+            <a href="#home" className="hover:text-white transition-colors">Home</a>
+            <a href="#services" className="hover:text-white transition-colors">Services</a>
+            <a href="#work" className="hover:text-white transition-colors">Projects</a>
+          </div>
+        </nav>
+
+        {/* Action Button */}
+        <button className="hidden sm:inline-block bg-white/10 hover:bg-white/20 text-white text-xs px-4 py-2 rounded-full border border-white/10 transition">
+          Let's talk
         </button>
 
-      {/* Mobile Navigation Links */}
-        <div className="flex md:hidden justify-center items-center gap-6 py-2 border-t border-white/5 text-xs text-slate-300">
-          <a href="#home" className="hover:text-white transition-colors">Home</a>
-          <a href="#services" className="hover:text-white transition-colors">Services</a>
-          <a href="#projects" className="hover:text-white transition-colors">Projects</a>
-        </div>
       </header>
 
       {/* HERO SECTION */}
-      <section className="max-w-7xl mx-auto px-6 pt-12 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section id="home" className="max-w-7xl mx-auto px-6 pt-12 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7 space-y-6">
           <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full text-xs text-purple-300">
             <Sparkles size={14} />
             YOUR DIGITAL GROWTH PARTNER
           </div>
           
-          <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-none">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-tight">
             Mr. Lee turn big ideas into <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-300">digital reality.</span>
           </h1>
           
-          <p className="text-gray-400 text-lg max-w-xl">
+          <p className="text-gray-400 text-base sm:text-lg max-w-xl">
             Mr. Lee design beautiful websites, build powerful software, and create digital experiences that help businesses grow.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-4">
-            <button className="bg-white text-black hover:bg-gray-200 font-medium px-6 py-3 rounded-full flex items-center gap-2 transition group">
+            <a href="#work" className="bg-white text-black hover:bg-gray-200 font-medium px-6 py-3 rounded-full flex items-center gap-2 transition group text-sm">
               Explore our Works/Services  
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="bg-white/5 hover:bg-white/10 border border-white/10 font-medium px-6 py-3 rounded-full transition">
+            </a>
+            <a href="#services" className="bg-white/5 hover:bg-white/10 border border-white/10 font-medium px-6 py-3 rounded-full transition text-sm">
               What we do
-            </button>
+            </a>
           </div>
 
           <div className="pt-8 flex items-center gap-4 border-t border-white/10 max-w-md">
-            <div className="bg-purple-600/20 p-2.5 rounded-full border border-purple-500/30 text-purple-400">
+            <div className="bg-purple-600/20 p-2.5 rounded-full border border-purple-500/30 text-purple-400 shrink-0">
               <Sparkles size={20} />
             </div>
             <div>
               <h4 className="text-sm font-semibold">Where innovative ideas meet existing technology to build the future.</h4>
-              <p className="text-xs text-gray-400">Mr. Lee build for what comes next.</p>
+              <p className="text-xs text-gray-400 mt-0.5">Mr. Lee build for what comes next.</p>
             </div>
           </div>
         </div>
 
-        {/* HERO CARD GRAPHIC (Matching Reference Screenshot Exactly) */}
-        <div className="lg:col-span-5 relative flex justify-center items-center py-16">
-          <div className="relative w-full max-w-[420px]">
+        {/* HERO CARD GRAPHIC */}
+        <div className="lg:col-span-5 relative flex justify-center items-center py-8 lg:py-16">
+          <div className="relative w-full max-w-[380px] sm:max-w-[420px]">
 
             {/* FLOATING TOP-RIGHT BADGE */}
             <div className="absolute -top-6 right-0 z-30 bg-[#16122b]/95 backdrop-blur-md border border-white/10 px-4 py-2.5 rounded-2xl text-xs flex items-center gap-2.5 text-purple-200 shadow-2xl">
@@ -78,7 +77,7 @@ export default function App() {
               <span className="font-medium tracking-wide">Creative ideas</span>
             </div>
 
-            {/* BACK CARD (Stacked & Tilted Background Card) */}
+            {/* BACK CARD */}
             <div className="absolute -top-10 -left-10 right-10 bottom-10 bg-[#f3f0ea] border border-white/10 rounded-[2.5rem] -rotate-12 scale-95 p-8 flex flex-col justify-between opacity-60 pointer-events-none shadow-2xl">
               <div className="text-xs font-mono text-red-400/100">01 /</div>
             </div>
@@ -99,16 +98,16 @@ export default function App() {
 
               {/* Glowing Circle Icon */}
               <div className="my-8 flex justify-center">
-                <div className="relative w-32 h-32 rounded-full flex items-center justify-center p-[2px] bg-gradient-to-b from-transparent via-purple-500 to-indigo-600 shadow-[0_0_40px_rgba(168,85,247,0.3)]">
+                <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full flex items-center justify-center p-[2px] bg-gradient-to-b from-transparent via-purple-500 to-indigo-600 shadow-[0_0_40px_rgba(168,85,247,0.3)]">
                   <div className="w-full h-full bg-[#0b0817] rounded-full flex items-center justify-center shadow-inner">
-                    <span className="text-4xl font-extrabold text-white tracking-tight">LEE</span>
+                    <span className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">LEE</span>
                   </div>
                 </div>
               </div>
 
               {/* Content Text */}
               <div className="text-center space-y-1.5 mb-10">
-                <h3 className="text-2xl font-bold tracking-tight text-white">Mr. Lee Built for the future.</h3>
+                <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">Mr. Lee Built for the future.</h3>
                 <p className="text-xs text-gray-400 font-normal">Creative thinking. Smart technology.</p>
               </div>
 
@@ -149,7 +148,6 @@ export default function App() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Card 1 */}
           <div className="bg-[#141026] border border-white/10 rounded-2xl p-8 flex flex-col justify-between hover:border-purple-500/50 transition group">
             <div>
               <div className="flex items-center justify-between mb-8">
@@ -169,7 +167,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Card 2 */}
           <div className="bg-[#141026] border border-white/10 rounded-2xl p-8 flex flex-col justify-between hover:border-purple-500/50 transition group">
             <div>
               <div className="flex items-center justify-between mb-8">
@@ -189,7 +186,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Card 3 */}
           <div className="bg-[#141026] border border-white/10 rounded-2xl p-8 flex flex-col justify-between hover:border-purple-500/50 transition group">
             <div>
               <div className="flex items-center justify-between mb-8">
@@ -224,8 +220,7 @@ export default function App() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Project 1 */}
-          <div className="bg-gradient-to-br from-[#1a1432] to-[#120f24] border border-white/10 rounded-3xl p-8 flex flex-col justify-between h-96 relative group overflow-hidden">
+          <div className="bg-gradient-to-br from-[#1a1432] to-[#120f24] border border-white/10 rounded-3xl p-8 flex flex-col justify-between h-80 sm:h-96 relative group overflow-hidden">
             <div className="flex items-center justify-between text-xs font-mono text-gray-400">
               <span>01 / 02</span>
               <span className="text-purple-400">WEB APPLICATION</span>
@@ -239,8 +234,7 @@ export default function App() {
             </div>
           </div>
 
-          {/* Project 2 */}
-          <div className="bg-gradient-to-br from-[#12261e] to-[#0f1f18] border border-white/10 rounded-3xl p-8 flex flex-col justify-between h-96 relative group overflow-hidden">
+          <div className="bg-gradient-to-br from-[#12261e] to-[#0f1f18] border border-white/10 rounded-3xl p-8 flex flex-col justify-between h-80 sm:h-96 relative group overflow-hidden">
             <div className="flex items-center justify-between text-xs font-mono text-gray-400">
               <span>02 / 02</span>
               <span className="text-emerald-400">DIGITAL MARKETPLACE</span>
@@ -261,8 +255,8 @@ export default function App() {
       {/* CALL TO ACTION FOOTER */}
       <section className="max-w-7xl mx-auto px-6 py-24 text-center">
         <span className="text-xs font-semibold text-purple-400 tracking-wider uppercase">Mr. Lee 🫱🏼‍🫲🏽 Have an idea?</span>
-        <h2 className="text-4xl lg:text-6xl font-extrabold mt-3 mb-8">Let's build something <br />remarkable.</h2>
-        <button className="bg-white text-black hover:bg-gray-200 font-medium px-8 py-4 rounded-full inline-flex items-center gap-2 transition group shadow-xl">
+        <h2 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold mt-3 mb-8">Let's build something <br />remarkable.</h2>
+        <button className="bg-white text-black hover:bg-gray-200 font-medium px-8 py-4 rounded-full inline-flex items-center gap-2 transition group shadow-xl text-sm">
           Start a conversation
           <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
         </button>
