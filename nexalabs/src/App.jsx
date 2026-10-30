@@ -9,12 +9,12 @@ export default function App() {
       <header className="max-w-7xl mx-auto px-6 pt-6 pb-4 flex flex-col md:flex-row items-center justify-between gap-4 border-b border-white/10">
         
         {/* Logo Section */}
-        <div className="flex items-center gap-2 font-bold text-xl tracking-wider">
-          <span className="bg-white text-black px-2 py-0.5 rounded font-black text-sm">LEE</span>
+        <div className="flex items-left gap-2 font-bold text-xl tracking-wider">
+          <span className="bg-white text-black px-2 py-0.5 rounded font-black text-sm">Li</span>
           <span className="whitespace-nowrap">Mr. Lee labs</span>
         </div>
 
-        {/* Centralized Navigation Links Underneath Logo on Mobile */}
+        {/* Centralized Navigation Links */}
         <nav className="w-full md:w-auto">
           <div className="flex justify-center items-center gap-6 text-sm text-slate-300">
             <a href="#home" className="hover:text-white transition-colors">Home</a>
@@ -67,26 +67,26 @@ export default function App() {
           </div>
         </div>
 
-        {/* HERO CARD GRAPHIC */}
-        <div className="lg:col-span-5 relative flex justify-center items-center py-8 lg:py-16">
-          <div className="relative w-full max-w-[380px] sm:max-w-[420px]">
+        {/* HERO CARD GRAPHIC (Mobile-Safe Clipping) */}
+        <div className="lg:col-span-5 relative flex justify-center items-center py-12 px-2 w-full overflow-hidden">
+          <div className="relative w-full max-w-[360px] sm:max-w-[400px] mx-auto">
 
             {/* FLOATING TOP-RIGHT BADGE */}
-            <div className="absolute -top-6 right-0 z-30 bg-[#16122b]/95 backdrop-blur-md border border-white/10 px-4 py-2.5 rounded-2xl text-xs flex items-center gap-2.5 text-purple-200 shadow-2xl">
+            <div className="absolute -top-4 right-2 sm:right-0 z-30 bg-[#16122b]/95 backdrop-blur-md border border-white/10 px-3.5 py-2 rounded-2xl text-xs flex items-center gap-2 text-purple-200 shadow-xl">
               <Sparkles size={14} className="text-purple-400 fill-purple-400" /> 
               <span className="font-medium tracking-wide">Creative ideas</span>
             </div>
 
             {/* BACK CARD */}
-            <div className="absolute -top-10 -left-10 right-10 bottom-10 bg-[#f3f0ea] border border-white/10 rounded-[2.5rem] -rotate-12 scale-95 p-8 flex flex-col justify-between opacity-60 pointer-events-none shadow-2xl">
-              <div className="text-xs font-mono text-red-400/100">01 /</div>
+            <div className="absolute -top-6 -left-2 right-2 bottom-6 bg-[#f3f0ea] border border-white/10 rounded-[2.2rem] -rotate-6 sm:-rotate-12 scale-95 p-6 flex flex-col justify-between opacity-50 pointer-events-none shadow-xl">
+              <div className="text-xs font-mono text-stone-600">01 /</div>
             </div>
 
             {/* MAIN FRONT CARD */}
-            <div className="relative z-20 bg-gradient-to-b from-[#18132d] via-[#120e24] to-[#0c091a] border border-white/15 rounded-[2.5rem] p-8 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] overflow-hidden backdrop-blur-2xl">
+            <div className="relative z-20 bg-gradient-to-b from-[#18132d] via-[#120e24] to-[#0c091a] border border-white/15 rounded-[2.2rem] p-6 sm:p-8 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] overflow-hidden backdrop-blur-2xl">
               
               {/* Card Header */}
-              <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-2 text-xs font-medium tracking-wider text-gray-300">
                   <span className="w-5 h-5 rounded-md bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xs font-bold shadow-[0_0_10px_rgba(16,185,129,0.3)]">✳</span>
                   <span className="font-semibold text-white tracking-normal">Mr. Lee labs</span>
@@ -97,7 +97,7 @@ export default function App() {
               </div>
 
               {/* Glowing Circle Icon */}
-              <div className="my-8 flex justify-center">
+              <div className="my-6 flex justify-center">
                 <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full flex items-center justify-center p-[2px] bg-gradient-to-b from-transparent via-purple-500 to-indigo-600 shadow-[0_0_40px_rgba(168,85,247,0.3)]">
                   <div className="w-full h-full bg-[#0b0817] rounded-full flex items-center justify-center shadow-inner">
                     <span className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">LEE</span>
@@ -106,7 +106,7 @@ export default function App() {
               </div>
 
               {/* Content Text */}
-              <div className="text-center space-y-1.5 mb-10">
+              <div className="text-center space-y-1 mb-8">
                 <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">Mr. Lee Built for the future.</h3>
                 <p className="text-xs text-gray-400 font-normal">Creative thinking. Smart technology.</p>
               </div>
@@ -125,7 +125,7 @@ export default function App() {
             </div>
 
             {/* FLOATING BOTTOM-LEFT BADGE */}
-            <div className="absolute -bottom-6 -left-6 z-30 bg-[#16122b]/95 backdrop-blur-md border border-white/10 px-4 py-2.5 rounded-2xl text-xs flex items-center gap-2.5 text-purple-200 shadow-2xl">
+            <div className="absolute -bottom-4 left-2 sm:left-0 z-30 bg-[#16122b]/95 backdrop-blur-md border border-white/10 px-3.5 py-2 rounded-2xl text-xs flex items-center gap-2 text-purple-200 shadow-xl">
               <span className="text-purple-400 font-mono text-sm font-bold">↗</span>
               <span className="font-medium tracking-wide">Digital solutions</span>
             </div>
