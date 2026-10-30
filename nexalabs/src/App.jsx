@@ -11,13 +11,13 @@ export default function App() {
           <span className="bg-white text-black px-2 py-0.5 rounded font-black">LEE</span>
           <span>Mr. Lee labs</span>
         </div>
-        <div className="hidden md:flex items-center gap-8 text-sm text-gray-400">
+        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
           <a href="#services" className="hover:text-white transition">Services</a>
           <a href="#work" className="hover:text-white transition">Work</a>
           <a href="#about" className="hover:text-white transition">About</a>
         </div>
         <button className="bg-white/10 hover:bg-white/20 text-white text-sm px-4 py-2 rounded-full border border-white/10 transition">
-          Let's to Mr. Lee
+          Let's to Lee
         </button>
       </header>
 
@@ -69,7 +69,7 @@ export default function App() {
             </div>
 
             {/* BACK CARD (Stacked & Tilted Background Card) */}
-            <div className="absolute -top-10 -left-10 right-10 bottom-10 bg-[#f3f0ea] border border-white/10 rounded-[2.5rem] -rotate-16 scale-95 p-8 flex flex-col justify-between opacity-60 pointer-events-none shadow-2xl">
+            <div className="absolute -top-10 -left-10 right-10 bottom-10 bg-[#f3f0ea] border border-white/10 rounded-[2.5rem] -rotate-12 scale-95 p-8 flex flex-col justify-between opacity-60 pointer-events-none shadow-2xl">
               <div className="text-xs font-mono text-red-400/100">01 /</div>
             </div>
 
